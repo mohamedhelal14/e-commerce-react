@@ -1,0 +1,75 @@
+.contact_page {
+  padding: 50px 0;
+  min-height: 70vh;
+}
+.contact_header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact_header h2 {
+  color: var(--main_color, #f36b08);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.contact_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.contact_info, .contact_form {
+  flex: 1;
+  min-width: 300px;
+}
+.contact_info h3, .contact_form h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.info_item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.info_icon {
+  font-size: 24px;
+  color: var(--main_color, #f36b08);
+}
+.info_item h4 {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.info_item p {
+  color: #666;
+  font-size: 14px;
+}
+.form_group {
+  margin-bottom: 15px;
+}
+.form_group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #444;
+}
+.form_group input, .form_group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.form_group input:focus, .form_group textarea:focus {
+  border-color: var(--main_color, #f36b08);
+}
+.btn_send {
+  background-color: var(--main_color, #f36b08);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn_send:hover {
+  background-color: #d95a00;
+}
