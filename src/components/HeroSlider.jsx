@@ -3,7 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
-import { Autoplay , Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
+
+// 1. استيراد الصور هنا (تأكد أن المسار النسبي نسبي لمكان هذا الملف)
+import banner1 from "../img/banner_Hero1.jpg";
+import banner2 from "../img/banner_Hero2.jpg";
+import banner3 from "../img/banner_Hero3.jpg";
 
 function HeroSlider() {
   return (
@@ -11,13 +16,13 @@ function HeroSlider() {
       <div className="hero">
         <div className="container">
           <Swiper
-          loop={true}
+            loop={true}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
             }}
-            pagination={true}
-            modules={[Pagination ,Autoplay ]}
+            pagination={{ clickable: true }}
+            modules={[Pagination, Autoplay]}
             className="mySwiper"
           >
             <SwiperSlide>
@@ -32,8 +37,10 @@ function HeroSlider() {
                 </Link>
               </div>
 
-              <img src="/src/img/banner_Hero1.jpg" alt="slider hero 1" />
+              {/* 2. استبدال المسار النصي بالمتغير */}
+              <img src={banner1} alt="slider hero 1" />
             </SwiperSlide>
+
             <SwiperSlide>
               <div className="content">
                 <h4>Introducing the new</h4>
@@ -46,8 +53,9 @@ function HeroSlider() {
                 </Link>
               </div>
 
-              <img src="/src/img/banner_Hero2.jpg" alt="slider hero 1" />
+              <img src={banner2} alt="slider hero 2" />
             </SwiperSlide>
+
             <SwiperSlide>
               <div className="content">
                 <h4>Introducing the new</h4>
@@ -60,7 +68,7 @@ function HeroSlider() {
                 </Link>
               </div>
 
-              <img src="/src/img/banner_Hero3.jpg" alt="slider hero 3" />
+              <img src={banner3} alt="slider hero 3" />
             </SwiperSlide>
           </Swiper>
         </div>
